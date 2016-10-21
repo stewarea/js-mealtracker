@@ -5,20 +5,12 @@ import { Meal } from './meal.model';
   selector: 'my-app',
   template: `
   <div class ="container">
-    <div class="jumbotro">
+    <div class="jumbotron">
       <h1>Meal Tracker Hacker</h1>
     </div>
     <hr>
     <div class="row">
         <div class="col-md-8">
-
-          <div class="row well">
-            <div class="col-md-12 list">
-              <meal-list [childMealList]="masterMealList" (editButtonClickSender)="showEdit($event)"
-              ></meal-list>
-            </div>
-          </div>
-
           <div class="row well">
             <div class="col-md-6 add">
               <meal-new (newMealSender)="addMeal($event)"
@@ -30,6 +22,14 @@ import { Meal } from './meal.model';
               ></meal-edit>
             </div>
           </div>
+          <div class="row well">
+            <div class="col-md-12 list">
+              <meal-list [childMealList]="masterMealList" (editButtonClickSender)="showEdit($event)"
+              ></meal-list>
+            </div>
+          </div>
+
+
         </div>
         <div class="col-sm-1">
         </div>

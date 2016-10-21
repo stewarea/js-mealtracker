@@ -11,6 +11,7 @@ import { Meal } from './meal.model';
           <option value="LowCalorie">Low Calorie</option>
           <option value="HighCalorie">High Calorie</option>
         </select>
+        <hr>
 
         <div *ngFor=" let currentMeal of childMealList | display:selectedDisplay">
           <h2>{{ currentMeal.name}}</h2>

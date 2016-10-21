@@ -1,3 +1,25 @@
 h1 {
-  
+
+}
+.container {
+  background-image: url(https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/19/199/199814/iuofjgenwsaxmjokhhpnwmuamrshk0al5nfxhjghon9uaudbzdecnih2m48ux2yu-f.jpg?1412531086);
+}
+
+
+.panel-default {
+  padding: 10px;
+  max-width:250px;
+  display: inline-block;
+}
+
+.jumbotron {
+  background-color: white;
+}
+
+.well {
+  background-color: white;
+}
+
+.panel-default {
+  background-color: lightgray;
 }
