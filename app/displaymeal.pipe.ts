@@ -9,8 +9,10 @@ import { Meal } from './meal.model';
 export class DisplayPipe implements PipeTransform {
   transform(input: Meal[], desiredDisplay) {
     var output: Meal[] = [];
+    if (desiredDisplay === "All") {
+        return input;
 
-    if (desiredDisplay === "LowCalorie") {
+  }  else if (desiredDisplay === "LowCalorie") {
       for (var i = 0; i < input.length; i++) {
         if (input[i].calories < 800) {
           output.push(input[i]);

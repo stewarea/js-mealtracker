@@ -5,8 +5,7 @@ import { Meal } from './meal.model';
   selector: 'meal-edit',
   template:`
   <div *ngIf="childSelectedMeal">
-    <hr>
-    <h3>Edit {{ childSelectedMeal.name }}</h3>
+    <h1>Edit {{ childSelectedMeal.name }}</h1>
 
     <div class= "form-group">
       <label>Edit Name</label>

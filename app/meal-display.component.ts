@@ -8,6 +8,7 @@ import { Meal } from './meal.model';
 
         <select (change)="onChange($event.target.value)">
           <option value="Null">No Filter </option>
+          <option value="All">All Meals</option>
           <option value="LowCalorie">Low Calorie</option>
           <option value="HighCalorie">High Calorie</option>
         </select>
@@ -24,9 +25,10 @@ import { Meal } from './meal.model';
 
 export class DisplayMealComponent {
   @Input() childMealList: Meal[];
-
+  @Input() childCalorieTotal: number;
+  @Output() newCalorieTotalSender = new EventEmitter();
   public selectedDisplay: string = "Null";
   onChange(optionFromMenu) {
     this.selectedDisplay = optionFromMenu
+    }
   }
-}

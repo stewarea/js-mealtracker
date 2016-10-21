@@ -14,9 +14,11 @@ var AppComponent = (function () {
     function AppComponent() {
         this.masterMealList = [
             new meal_model_1.Meal("Tacos", 350, "So Good"),
-            new meal_model_1.Meal("Italian Sandwich", 580, "too much oil"),
-            new meal_model_1.Meal("Spaghetti", 700, "great sauce"),
-            new meal_model_1.Meal("Hot Wings", 900, "spicy!")
+            new meal_model_1.Meal("Italian Sandwich", 580, "Too much oil"),
+            new meal_model_1.Meal("Spaghetti", 850, "Great sauce"),
+            new meal_model_1.Meal("Hot Wings", 900, "spicy!"),
+            new meal_model_1.Meal("Pad Thai", 400, "Very Tasty!"),
+            new meal_model_1.Meal("French Fries", 300, "Favorite")
         ];
         this.selectedMeal = null;
     }
@@ -34,7 +36,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n  <div class=\"body\">\n    <div class =\"container\">\n      <div class=\"jumbotron\">\n        <p>Meal Tracker Hacker</p>\n      </div>\n      <hr>\n      <div class=\"row\">\n          <div class=\"col-md-8\">\n            <div class=\"row well\">\n              <div class=\"col-md-6 add\">\n                <meal-new (newMealSender)=\"addMeal($event)\"\n                ></meal-new>\n              </div>\n\n              <div class=\"col-md-6 edit\">\n                <meal-edit [childSelectedMeal]=\"selectedMeal\" (doneEditingClickedSender)=\"finishedEditing()\"\n                ></meal-edit>\n              </div>\n            </div>\n            <div class=\"row well\">\n              <div class=\"col-md-12 list\">\n                <meal-list [childMealList]=\"masterMealList\" (editButtonClickSender)=\"showEdit($event)\"\n                ></meal-list>\n              </div>\n            </div>\n\n\n          </div>\n          <div class=\"col-sm-1\">\n          </div>\n          <div class=\"col-md-3 well filter\">\n              <meal-display [childMealList]=\"masterMealList\"\n              ></meal-display>\n          </div>\n        </div>\n      </div>\n    </div>\n  "
+        template: "\n  <div class=\"body\">\n    <div class =\"container\">\n      <div class=\"jumbotron\">\n        <p>Meal Tracker Hacker</p>\n      </div>\n      <div class=\"row\">\n          <div class=\"col-md-8\">\n            <div class=\"row well add\">\n              <div class=\"col-md-6 add\">\n                <meal-new (newMealSender)=\"addMeal($event)\"\n                ></meal-new>\n              </div>\n\n              <div class=\"col-md-6 edit\">\n                <meal-edit [childSelectedMeal]=\"selectedMeal\" (doneEditingClickedSender)=\"finishedEditing()\"\n                ></meal-edit>\n              </div>\n            </div>\n            <div class=\"row well\">\n              <div class=\"col-md-12 list\">\n                <meal-list [childMealList]=\"masterMealList\" (editButtonClickSender)=\"showEdit($event)\"\n                ></meal-list>\n              </div>\n            </div>\n\n\n          </div>\n          <div class=\"col-sm-1\">\n          </div>\n          <div class=\"col-md-3 well filter\">\n              <meal-display [childMealList]=\"masterMealList\"\n              ></meal-display>\n          </div>\n        </div>\n      </div>\n    </div>\n  "
     }),
     __metadata("design:paramtypes", [])
 ], AppComponent);

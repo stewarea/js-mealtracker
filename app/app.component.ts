@@ -9,10 +9,9 @@ import { Meal } from './meal.model';
       <div class="jumbotron">
         <p>Meal Tracker Hacker</p>
       </div>
-      <hr>
       <div class="row">
           <div class="col-md-8">
-            <div class="row well">
+            <div class="row well add">
               <div class="col-md-6 add">
                 <meal-new (newMealSender)="addMeal($event)"
                 ></meal-new>
@@ -47,12 +46,16 @@ import { Meal } from './meal.model';
 export class AppComponent {
   public masterMealList: Meal[] = [
     new Meal("Tacos", 350, "So Good"),
-    new Meal("Italian Sandwich", 580, "too much oil"),
-    new Meal("Spaghetti", 700, "great sauce"),
-    new Meal("Hot Wings", 900, "spicy!")
+    new Meal("Italian Sandwich", 580, "Too much oil"),
+    new Meal("Spaghetti", 850, "Great sauce"),
+    new Meal("Hot Wings", 900, "spicy!"),
+    new Meal("Pad Thai", 400, "Very Tasty!"),
+    new Meal("French Fries", 300, "Favorite")
   ];
 
   selectedMeal: Meal = null;
+
+
 
   addMeal(newMealFromChild: Meal) {
     this.masterMealList.push(newMealFromChild);
