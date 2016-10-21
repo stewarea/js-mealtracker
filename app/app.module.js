@@ -22,9 +22,7 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
             declarations: [app_component_1.AppComponent,
-                meal_list_component_1.MealListComponent,
-                meal_new_component_1.NewMealComponent,
-                meal_edit_component_1.EditMealComponent],
+                meal_list_component_1.MealListComponent, meal_new_component_1.NewMealComponent, meal_edit_component_1.EditMealComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

@@ -11,9 +11,7 @@ import { EditMealComponent } from './meal-edit.component';
 
   declarations:
   [ AppComponent,
-  MealListComponent,
-  NewMealComponent,
-  EditMealComponent],
+  MealListComponent, NewMealComponent, EditMealComponent],
 
   bootstrap:    [ AppComponent ]
 })

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Meal } from './meal.model';
 
 @Component({
@@ -11,6 +11,7 @@ import { Meal } from './meal.model';
           <h2>{{ currentMeal.name}}</h2>
           <h5>Calories: {{ currentMeal.calories }}</h5>
           <h5>Description: {{ currentMeal.details }}</h5>
+          <button (click)="editButton(currentMeal)">Edit Meal</button>
         </div>
       </div>
       <div class="col-sm-9">
@@ -23,5 +24,9 @@ import { Meal } from './meal.model';
 
 export class MealListComponent {
   @Input() childMealList: Meal[];
+  @Output() editButtonClickSender = new EventEmitter();
 
+  editButton(mealToEdit: Meal) {
+  this.editButtonClickSender.emit(mealToEdit);
+}
 }

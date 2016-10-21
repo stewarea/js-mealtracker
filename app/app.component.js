@@ -8,14 +8,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var meal_model_1 = require('./meal.model');
+var core_1 = require("@angular/core");
+var meal_model_1 = require("./meal.model");
 var AppComponent = (function () {
     function AppComponent() {
         this.masterMealList = [
             new meal_model_1.Meal("Tacos", 350, "So Good"),
             new meal_model_1.Meal("Italian Sandwich", 580, "too much oil")
         ];
+        this.selectedMeal = null;
     }
     AppComponent.prototype.addMeal = function (newMealFromChild) {
         this.masterMealList.push(newMealFromChild);
@@ -26,14 +27,14 @@ var AppComponent = (function () {
     AppComponent.prototype.finishedEditing = function () {
         this.selectedMeal = null;
     };
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n  <div class =\"container\">\n    <h1>Meal Tracker Hacker</h1>\n    <hr>\n    <meal-list [childMealList]=\"masterMealList\" (editButtonClickSender)=\"showEdit($event)\"\n    ></meal-list>\n\n    <meal-new (newMealSender)=\"addMeal($event)\"\n    ></meal-new>\n\n    <meal-edit [childSelectedMeal]=\"selectedMeal\" (doneEditingClickedSender)=\"finishedEditing()\"\n    ></meal-edit>\n\n  </div>\n  "
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
     return AppComponent;
 }());
+AppComponent = __decorate([
+    core_1.Component({
+        selector: 'my-app',
+        template: "\n  <div class =\"container\">\n    <h1>Meal Tracker Hacker</h1>\n    <hr>\n    <meal-list [childMealList]=\"masterMealList\" (editButtonClickSender)=\"showEdit($event)\"\n    ></meal-list>\n\n    <meal-new (newMealSender)=\"addMeal($event)\"\n    ></meal-new>\n\n    <meal-edit [childSelectedMeal]=\"selectedMeal\" (doneEditingClickedSender)=\"finishedEditing()\"\n    ></meal-edit>\n\n  </div>\n  "
+    }),
+    __metadata("design:paramtypes", [])
+], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

@@ -26,6 +26,8 @@ export class AppComponent {
     new Meal("Italian Sandwich", 580, "too much oil")
   ];
 
+  selectedMeal: Meal = null;
+
   addMeal(newMealFromChild: Meal) {
     this.masterMealList.push(newMealFromChild);
   }
