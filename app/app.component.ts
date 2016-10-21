@@ -4,11 +4,19 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'my-app',
   template: `
-  <h1>My First Angular 2 App</h1>
-  <h2>Is this thing on?</h2>
+  <div class ="container">
+    <h1>Meal Tracker Hacker</h1>
+
+    <meal-list [childMasterList]="masterMealList"
+    ></meal-list>
+
+  </div>
   `
 })
 
 export class AppComponent {
-
+  public masterMealList: Meal[] = [
+    new Meal("Tacos", 350, "So Good"),
+    new Meal("Italian Sandwich", 580, "too much oil")
+  ];
 }
