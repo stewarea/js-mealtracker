@@ -9,11 +9,11 @@ import { Meal } from './meal.model';
     <form class="form">
       <div class="form-group">
         <label>Meal Name: </label>
-        <input #newName>
+        <input #newName required>
       </div>
       <div class="form-group">
         <label>Calories: </label>
-        <input #newCalories>
+        <input #newCalories required>
       </div>
       <div class="form-group">
         <label>Details:</label>
