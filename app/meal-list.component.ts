@@ -6,12 +6,15 @@ import { Meal } from './meal.model';
   template:`
     <div class ="row">
       <div class="col-sm-9">
-        <h2>All Meals</h2>
+        <h1>All Meals</h1>
         <div *ngFor=" let currentMeal of childMealList">
-          {{ currentMeal.name}}
+          <h2>{{ currentMeal.name}}</h2>
+          <h5>Calories: {{ currentMeal.calories }}</h5>
+          <h5>Description: {{ currentMeal.details }}</h5>
         </div>
       </div>
       <div class="col-sm-9">
+        <h2>Meal Display</h2>
       </div>
     </div>
   `

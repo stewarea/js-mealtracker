@@ -19,10 +19,10 @@ import { Meal } from './meal.model';
           <label>Details</label>
           <input #newDetails>
       </div>
-      <button (click)="addMealClicked(newMeal.value, newCalories.value, newDescription.value);
+      <button (click)="addMealClicked(newMeal.value, newCalories.value, newDetails.value);
       newName.value='';
       newCalories.value='';
-      newDescription.value='';
+      newDetails.value='';
       ">Add Meal</button>
     </form>
   `

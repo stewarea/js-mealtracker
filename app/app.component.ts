@@ -6,7 +6,7 @@ import { Meal } from './meal.model';
   template: `
   <div class ="container">
     <h1>Meal Tracker Hacker</h1>
-
+    <hr>
     <meal-list [childMealList]="masterMealList"
     ></meal-list>
 
