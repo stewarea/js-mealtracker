@@ -7,9 +7,13 @@ import { Meal } from './meal.model';
   <div class ="container">
     <h1>Meal Tracker Hacker</h1>
     <hr>
-    <meal-list [childMealList]="masterMealList" (editButtonClickSender)="showEdit($event)"
-    ></meal-list>
-
+    <div class='col-md-9'>
+      <meal-list [childMealList]="masterMealList" (editButtonClickSender)="showEdit($event)"
+      ></meal-list>
+    <div>
+    <div class="col-md-3">
+    
+    <div>
     <meal-new (newMealSender)="addMeal($event)"
     ></meal-new>
 
