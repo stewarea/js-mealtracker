@@ -17,10 +17,13 @@ var AppComponent = (function () {
             new meal_model_1.Meal("Italian Sandwich", 580, "too much oil")
         ];
     }
+    AppComponent.prototype.addMeal = function (newMealFromChild) {
+        this.masterMealList.push(newMealFromChild);
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n  <div class =\"container\">\n    <h1>Meal Tracker Hacker</h1>\n\n    <meal-list [childMealList]=\"masterMealList\"\n    ></meal-list>\n\n  </div>\n  "
+            template: "\n  <div class =\"container\">\n    <h1>Meal Tracker Hacker</h1>\n\n    <meal-list [childMealList]=\"masterMealList\"\n    ></meal-list>\n\n    <meal-new (newMealSender)=\"addMeal($event)\"\n    ></meal-new>\n\n  </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
