@@ -14,7 +14,9 @@ var AppComponent = (function () {
     function AppComponent() {
         this.masterMealList = [
             new meal_model_1.Meal("Tacos", 350, "So Good"),
-            new meal_model_1.Meal("Italian Sandwich", 580, "too much oil")
+            new meal_model_1.Meal("Italian Sandwich", 580, "too much oil"),
+            new meal_model_1.Meal("Spaghetti", 700, "great sauce"),
+            new meal_model_1.Meal("Hot Wings", 900, "spicy!")
         ];
         this.selectedMeal = null;
     }

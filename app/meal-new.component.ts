@@ -9,7 +9,7 @@ import { Meal } from './meal.model';
     <form class="form">
       <div class="form-group">
           <label>Meal Name: </label>
-          <input #newMeal>
+          <input #newName>
       </div>
       <div class="form-group">
           <label>Calories: </label>
@@ -19,10 +19,10 @@ import { Meal } from './meal.model';
           <label>Details:</label>
           <input #newDetails>
       </div>
-      <button (click)="addMealClicked(newMeal.value, newCalories.value, newDetails.value);
-      newName.value =' ';
-      newCalories.value =' ';
-      newDetails.value =' ';
+      <button (click)="addMealClicked(newName.value, newCalories.value, newDetails.value);
+      newName.value ='';
+      newCalories.value ='';
+      newDetails.value ='';
       ">Add Meal</button>
     </form>
   `
