@@ -7,11 +7,14 @@ import { Meal } from './meal.model';
   <div class ="container">
     <h1>Meal Tracker Hacker</h1>
     <hr>
-    <meal-list [childMealList]="masterMealList"
+    <meal-list [childMealList]="masterMealList" (editButtonClickSender)="showEdit($event)"
     ></meal-list>
 
     <meal-new (newMealSender)="addMeal($event)"
     ></meal-new>
+
+    <meal-edit [childSelectedMeal]="selectedMeal" (doneEditingClickedSender)="finishedEditing()"
+    ></meal-edit>
 
   </div>
   `
@@ -26,4 +29,11 @@ export class AppComponent {
   addMeal(newMealFromChild: Meal) {
     this.masterMealList.push(newMealFromChild);
   }
+  showEdit(clickedMeal: Meal) {
+    this.selectedMeal = clickedMeal;
+  }
+  finishedEditing() {
+    this.selectedMeal = null;
+  }
+
 }
