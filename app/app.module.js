@@ -15,7 +15,8 @@ var app_component_1 = require('./app.component');
 var meal_list_component_1 = require('./meal-list.component');
 var meal_new_component_1 = require('./meal-new.component');
 var meal_edit_component_1 = require('./meal-edit.component');
-var display_pipe_1 = require('./display.pipe');
+var displaymeal_pipe_1 = require('./displaymeal.pipe');
+var meal_display_component_1 = require('./meal-display.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -23,7 +24,7 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
             declarations: [app_component_1.AppComponent,
-                meal_list_component_1.MealListComponent, meal_new_component_1.NewMealComponent, meal_edit_component_1.EditMealComponent, display_pipe_1.DisplayPipe],
+                meal_list_component_1.MealListComponent, meal_new_component_1.NewMealComponent, meal_edit_component_1.EditMealComponent, displaymeal_pipe_1.DisplayPipe, meal_display_component_1.DisplayMealComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

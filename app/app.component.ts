@@ -7,19 +7,32 @@ import { Meal } from './meal.model';
   <div class ="container">
     <h1>Meal Tracker Hacker</h1>
     <hr>
-    <div class='col-md-9'>
-      <meal-list [childMealList]="masterMealList" (editButtonClickSender)="showEdit($event)"
-      ></meal-list>
-    <div>
-    <div class="col-md-3">
-    
-    <div>
-    <meal-new (newMealSender)="addMeal($event)"
-    ></meal-new>
+    <div class="row">
+      <div class='col-md-9'>
+        <meal-list [childMealList]="masterMealList" (editButtonClickSender)="showEdit($event)"
+        ></meal-list>
+      </div>
 
-    <meal-edit [childSelectedMeal]="selectedMeal" (doneEditingClickedSender)="finishedEditing()"
-    ></meal-edit>
+      <div class="col-md-3">
+        <meal-display [childMealList]="masterMealList"
+        ></meal-display>
+      </div>
 
+        <div class="row">
+          <div class="col-md-4">
+            <meal-new (newMealSender)="addMeal($event)"
+            ></meal-new>
+          </div>
+
+          <div class="col-md-5">
+            <meal-edit [childSelectedMeal]="selectedMeal" (doneEditingClickedSender)="finishedEditing()"
+            ></meal-edit>
+          </div>
+
+        </div>
+
+
+    </div>
   </div>
   `
 })

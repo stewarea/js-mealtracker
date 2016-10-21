@@ -30,7 +30,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n  <div class =\"container\">\n    <h1>Meal Tracker Hacker</h1>\n    <hr>\n    <div class='col-md-9'>\n      <meal-list [childMealList]=\"masterMealList\" (editButtonClickSender)=\"showEdit($event)\"\n      ></meal-list>\n    <div>\n    <div class=\"col-md-3\">\n    \n    <div>\n    <meal-new (newMealSender)=\"addMeal($event)\"\n    ></meal-new>\n\n    <meal-edit [childSelectedMeal]=\"selectedMeal\" (doneEditingClickedSender)=\"finishedEditing()\"\n    ></meal-edit>\n\n  </div>\n  "
+            template: "\n  <div class =\"container\">\n    <h1>Meal Tracker Hacker</h1>\n    <hr>\n    <div class=\"row\">\n      <div class='col-md-9'>\n        <meal-list [childMealList]=\"masterMealList\" (editButtonClickSender)=\"showEdit($event)\"\n        ></meal-list>\n      </div>\n\n      <div class=\"col-md-3\">\n        <meal-display [childMealList]=\"masterMealList\"\n        ></meal-display>\n      </div>\n\n        <div class=\"row\">\n          <div class=\"col-md-4\">\n            <meal-new (newMealSender)=\"addMeal($event)\"\n            ></meal-new>\n          </div>\n\n          <div class=\"col-md-5\">\n            <meal-edit [childSelectedMeal]=\"selectedMeal\" (doneEditingClickedSender)=\"finishedEditing()\"\n            ></meal-edit>\n          </div>\n\n        </div>\n\n\n    </div>\n  </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
