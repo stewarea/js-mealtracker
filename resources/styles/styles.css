@@ -11,15 +11,15 @@
 .panel-default {
   padding: 10px;
   width: 250px;
+  max-height: inherit;
   display: inline-block;
-  display: inline-block;;
 }
 
 .jumbotron {
   background-color: white;
   text-align: center;
-  opacity: .8;
-  font-family: cursive;
+  opacity: .9;
+  border: dotted black;
     p {
       font-size: 5em;
       font-family: 'Gloria Hallelujah', cursive;
@@ -29,6 +29,7 @@
 .well {
   background-color: white;
   opacity: .9;
+  border: solid black;
 
 }
 
