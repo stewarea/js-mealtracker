@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var meal_model_1 = require("./meal.model");
+var core_1 = require('@angular/core');
+var meal_model_1 = require('./meal.model');
 var AppComponent = (function () {
     function AppComponent() {
         this.masterMealList = [
@@ -17,14 +17,14 @@ var AppComponent = (function () {
             new meal_model_1.Meal("Italian Sandwich", 580, "too much oil")
         ];
     }
+    AppComponent = __decorate([
+        core_1.Component({
+            selector: 'my-app',
+            template: "\n  <div class =\"container\">\n    <h1>Meal Tracker Hacker</h1>\n\n    <meal-list [childMealList]=\"masterMealList\"\n    ></meal-list>\n\n  </div>\n  "
+        }), 
+        __metadata('design:paramtypes', [])
+    ], AppComponent);
     return AppComponent;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        selector: 'my-app',
-        template: "\n  <div class =\"container\">\n    <h1>Meal Tracker Hacker</h1>\n\n    <meal-list [childMasterList]=\"masterMealList\"\n    ></meal-list>\n\n  </div>\n  "
-    }),
-    __metadata("design:paramtypes", [])
-], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

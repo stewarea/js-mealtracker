@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Meal } from './meal.model';
 
 @Component({
@@ -8,16 +8,17 @@ import { Meal } from './meal.model';
       <div class="col-sm-9">
         <h2>All Meals</h2>
         <div *ngFor=" let currentMeal of childMealList">
-          {{ childMealList.name}}
+          {{ currentMeal.name}}
         </div>
       </div>
       <div class="col-sm-9">
-      </div>  
+      </div>
     </div>
   `
 
 })
 
 export class MealListComponent {
+  @Input() childMealList: Meal[];
 
 }
