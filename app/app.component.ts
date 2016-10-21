@@ -34,7 +34,7 @@ import { Meal } from './meal.model';
           </div>
           <div class="col-sm-1">
           </div>
-          <div class="col-md-3 well">
+          <div class="col-md-3 well filter">
               <meal-display [childMealList]="masterMealList"
               ></meal-display>
           </div>

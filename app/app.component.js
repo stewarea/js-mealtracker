@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var meal_model_1 = require('./meal.model');
+var core_1 = require("@angular/core");
+var meal_model_1 = require("./meal.model");
 var AppComponent = (function () {
     function AppComponent() {
         this.masterMealList = [
@@ -29,14 +29,14 @@ var AppComponent = (function () {
     AppComponent.prototype.finishedEditing = function () {
         this.selectedMeal = null;
     };
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n  <div class=\"body\">\n    <div class =\"container\">\n      <div class=\"jumbotron\">\n        <p>Meal Tracker Hacker</p>\n      </div>\n      <hr>\n      <div class=\"row\">\n          <div class=\"col-md-8\">\n            <div class=\"row well\">\n              <div class=\"col-md-6 add\">\n                <meal-new (newMealSender)=\"addMeal($event)\"\n                ></meal-new>\n              </div>\n\n              <div class=\"col-md-6 edit\">\n                <meal-edit [childSelectedMeal]=\"selectedMeal\" (doneEditingClickedSender)=\"finishedEditing()\"\n                ></meal-edit>\n              </div>\n            </div>\n            <div class=\"row well\">\n              <div class=\"col-md-12 list\">\n                <meal-list [childMealList]=\"masterMealList\" (editButtonClickSender)=\"showEdit($event)\"\n                ></meal-list>\n              </div>\n            </div>\n\n\n          </div>\n          <div class=\"col-sm-1\">\n          </div>\n          <div class=\"col-md-3 well\">\n              <meal-display [childMealList]=\"masterMealList\"\n              ></meal-display>\n          </div>\n        </div>\n      </div>\n    </div>\n  "
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
     return AppComponent;
 }());
+AppComponent = __decorate([
+    core_1.Component({
+        selector: 'my-app',
+        template: "\n  <div class=\"body\">\n    <div class =\"container\">\n      <div class=\"jumbotron\">\n        <p>Meal Tracker Hacker</p>\n      </div>\n      <hr>\n      <div class=\"row\">\n          <div class=\"col-md-8\">\n            <div class=\"row well\">\n              <div class=\"col-md-6 add\">\n                <meal-new (newMealSender)=\"addMeal($event)\"\n                ></meal-new>\n              </div>\n\n              <div class=\"col-md-6 edit\">\n                <meal-edit [childSelectedMeal]=\"selectedMeal\" (doneEditingClickedSender)=\"finishedEditing()\"\n                ></meal-edit>\n              </div>\n            </div>\n            <div class=\"row well\">\n              <div class=\"col-md-12 list\">\n                <meal-list [childMealList]=\"masterMealList\" (editButtonClickSender)=\"showEdit($event)\"\n                ></meal-list>\n              </div>\n            </div>\n\n\n          </div>\n          <div class=\"col-sm-1\">\n          </div>\n          <div class=\"col-md-3 well filter\">\n              <meal-display [childMealList]=\"masterMealList\"\n              ></meal-display>\n          </div>\n        </div>\n      </div>\n    </div>\n  "
+    }),
+    __metadata("design:paramtypes", [])
+], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

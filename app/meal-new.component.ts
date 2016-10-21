@@ -5,7 +5,7 @@ import { Meal } from './meal.model';
   selector: 'meal-new',
   template:`
   <hr>
-  <h2>Add a Meal</h2>
+  <h1>Add a Meal</h1>
     <form class="form">
       <div class="form-group">
           <label>Meal Name: </label>
