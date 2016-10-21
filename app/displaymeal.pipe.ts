@@ -25,7 +25,7 @@ export class DisplayPipe implements PipeTransform {
         }
         return output;
     } else {
-      return input;
+      return null;
     }
   }
 }

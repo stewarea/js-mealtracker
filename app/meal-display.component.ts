@@ -7,7 +7,7 @@ import { Meal } from './meal.model';
         <h1>Filter Meals</h1>
 
         <select (change)="onChange($event.target.value)">
-          <option value="All">All Meals </option>
+          <option value="Null">No Filter </option>
           <option value="LowCalorie">Low Calorie</option>
           <option value="HighCalorie">High Calorie</option>
         </select>
@@ -24,7 +24,7 @@ import { Meal } from './meal.model';
 export class DisplayMealComponent {
   @Input() childMealList: Meal[];
 
-  public selectedDisplay: string = "All";
+  public selectedDisplay: string = "Null";
   onChange(optionFromMenu) {
     this.selectedDisplay = optionFromMenu
   }
